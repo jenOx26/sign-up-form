@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="left">
+                <div class="logo">
+                    <img src="images/logo.png" alt="logo" width="100px">
+                    <h1>ODIN</h1>
+                </div>
+            </div>
+            <div class="right">
+                <div class="intro"></div>
+                <form action="https://formsubmit.co/jnochsner26@gmail.com" method="post">
+                    <!--Honeypot-->
+                    <input type="text" name="_honey" style="display: none;">
+
+                    <!--Disable Captcha-->
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <label for="firstName">FIRST NAME</label>
+                    <input type="text" id="firstName" name="firstName">
+                    <label for="lastName">LAST NAME</label>
+                    <input type="text" id="lastName" name="lastName">
+                    <label for="email">EMAIL</label>
+                    <input type="email" id="email" name="email">
+                    <label for="phone">PHONE</label>
+                    <input type="tel" id="phone" name="phone">
+                    <label for="password">PASSWORD</label>
+                    <input type="password" id="password" name="password">
+                    <label for="password">CONFIRM PASSWORD</label>
+                    <input type="password" id="confirm" name="confirm">
+                </form>
+                <div class="createAccount">
+                    <button type="submit" class="createAccountBtn">Create Account</button>
+                </div>
+            </div>
+        </div>    
+    </div>
+</body>
+</html>
