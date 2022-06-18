@@ -5,41 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-Up Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <div class="content">
             <div class="left">
                 <div class="logo">
-                    <img src="images/logo.png" alt="logo" width="100px">
-                    <h1>ODIN</h1>
+                    <img src="images/logo.png" alt="logo" height="100px">
+                    <h1 id="odin">ODIN</h1>
                 </div>
             </div>
             <div class="right">
-                <div class="intro"></div>
-                <form action="https://formsubmit.co/jnochsner26@gmail.com" method="post">
-                    <!--Honeypot-->
-                    <input type="text" name="_honey" style="display: none;">
-
-                    <!--Disable Captcha-->
-                    <input type="hidden" name="_captcha" value="false">
-
-                    <label for="firstName">FIRST NAME</label>
-                    <input type="text" id="firstName" name="firstName">
-                    <label for="lastName">LAST NAME</label>
-                    <input type="text" id="lastName" name="lastName">
-                    <label for="email">EMAIL</label>
-                    <input type="email" id="email" name="email">
-                    <label for="phone">PHONE</label>
-                    <input type="tel" id="phone" name="phone">
-                    <label for="password">PASSWORD</label>
-                    <input type="password" id="password" name="password">
-                    <label for="password">CONFIRM PASSWORD</label>
-                    <input type="password" id="confirm" name="confirm">
-                </form>
-                <div class="createAccount">
-                    <button type="submit" class="createAccountBtn">Create Account</button>
+                <div class="intro">
+                    <p>This is not a real online service! You know you need something like this in 
+                        your life to help you realize your deepest dreams. 
+                    </p>
+                    <p>Sign up <em>now</em> to get started.</p>
+                    <br><br>
+                    <p>You <em>know</em> you want to.</p>
                 </div>
+                <form action="https://formsubmit.co/jnochsner26@gmail.com" method="post">
+                    <div class="form">
+                        <legend>Let's do this!</legend>
+                        <br><br>
+                        <!--Honeypot-->
+                        <input type="text" name="_honey" style="display: none;">
+    
+                        <!--Disable Captcha-->
+                        <input type="hidden" name="_captcha" value="false">
+                        <div class="inputs">
+                            <div class="form1">
+                                <label for="firstName">FIRST NAME</label>
+                                <input type="text" id="firstName" name="firstName" placeholder=" " required>
+                                <br><br>
+                                <label for="email">EMAIL</label>
+                                <input type="email" id="email" name="email" placeholder=" " required>
+                                <br><br>
+                                <label for="password">PASSWORD</label>
+                                <input type="password" id="password" name="password" 
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" placeholder=" " required>    
+                            </div>
+                            <div class="form2">
+                                <label for="lastName">LAST NAME</label>
+                                <input type="text" id="lastName" name="lastName" placeholder=" " required>
+                                <br><br>
+                                <label for="phone">PHONE</label>
+                                <input type="text" id="phone" name="phone" placeholder=" " minlength="10" maxlength="10" required>
+                                <br><br>
+                                <label for="password">CONFIRM PASSWORD</label>
+                                <input type="password" id="confirm" name="confirm" 
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" placeholder=" " required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='error'>
+                        <div class='passErrorMsg'>* Passwords do not match</div>
+                      </div>
+                    <div class="createAccount">
+                        <button type="submit" class="createAccountBtn">Create Account</button>
+                        <p>Already have an account? Log in.</p>
+                    </div>
+                </form>
             </div>
         </div>    
     </div>
